@@ -19,4 +19,10 @@ public class HomeController : Controller
      ViewBag.palabra = Partida.palabra;
     return View();
     }
+
+    public IActionResult Jugar()
+    {
+        
+        return View("Jugar");
+    } 
 }
