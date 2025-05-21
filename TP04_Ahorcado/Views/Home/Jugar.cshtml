@@ -1,4 +1,18 @@
-@foreach(char letra in @ViewBag.palabra)
+<p>Palabra: @ViewBag.palabra</p>
+<p>Intentos: @ViewBag.intento</p>
+<p>Letras usadas: </p>
+@foreach(char letra in @ViewBag.letras)
 {
-     <p>@ViewBag.listaLetras.letra</p>
+    <p>@letra</p>
 }
+
+<form asp-action="IngresarLetra" method="post">
+    <input type="text" name="letra" maxlength="1" required />
+    <button type="submit">Enviar letra</button>
+</form>
+
+<form asp-action="Arriesgar" method="post">
+    <input type="text" name="palabra" placeholder="Arriesgar palabra" required />
+    <button type="submit">Arriesgar</button>
+</form>
+<a href='@Url.Action("Fin","Home")' alt = ""> </a>

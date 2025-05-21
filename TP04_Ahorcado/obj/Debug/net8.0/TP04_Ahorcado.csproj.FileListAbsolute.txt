@@ -27,3 +27,14 @@ Z:\Prog 2025\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\refint\TP04_Ahorcado.d
 Z:\Prog 2025\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.pdb
 Z:\Prog 2025\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.genruntimeconfig.cache
 Z:\Prog 2025\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\ref\TP04_Ahorcado.dll
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.AssemblyInfoInputs.cache
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.AssemblyInfo.cs
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.csproj.CoreCompileInputs.cache
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.RazorAssemblyInfo.cache
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.RazorAssemblyInfo.cs
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.sourcelink.json
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.dll
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\refint\TP04_Ahorcado.dll
+C:\Users\48855001\TP04_Ahorcado\TP04_Ahorcado\obj\Debug\net8.0\TP04_Ahorcado.pdb

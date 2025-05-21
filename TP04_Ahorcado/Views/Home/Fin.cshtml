@@ -1,0 +1,11 @@
+<h2>¡Fin del Juego!</h2>
+
+@if (ViewBag.ganoP)
+{
+    <p>¡Felicidades! Adivinaste la palabra.</p>
+}
+else
+{
+    <p>¡Oh no! Perdiste. La palabra era: @Juego.palabraSecreta</p>
+}
+<a href='@Url.Action("Index","Home")' alt = "Volver a la pag principal"> Volver a la pag principal</a>

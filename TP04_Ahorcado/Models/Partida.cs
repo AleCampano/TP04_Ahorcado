@@ -4,44 +4,119 @@ static public class Partida
 {
 static public string palabra{get; private set;}
  static public int intentos{get; private set;}
-static public List <char> letrasU {get; private set;}
+static public List <char> letrasIngeresadas {get; private set;}
+static public bool juegoFinalizado {get; private set;}
+static public bool gano {get; private set;}
 
 public static void inicializarPartida()
 {
   palabra = "Murcielago";
-  letrasU = new List<char>();
+  letrasIngeresadas = new List<char>();
   intentos = 0;
-
-  List <char> listaLetras = new List<char>();
+  juegoFinalizado = false;
+  gano = false;
 }
 
-public static void verificarIngreso(char letra)
+public static string ObtenerPalabra()
+        {
+            string resultado = "";
+
+            for (int i = 0; i < palabra.Length; i++)
+            {
+                char letra = palabra[i];
+                bool letraEncontrada = false;
+
+                for (int j = 0; j < letrasIngresadas.Count; j++)
+                {
+                    if (letrasIngresadas[j] == letra)
+                    {
+                        letraEncontrada = true;
+                    }
+                }
+
+                if (letraEncontrada == true)
+                {
+                    resultado += letra;
+                }
+                else if(letraEncontrada == false)
+                {
+                    resultado += "_ ";
+                }
+            }
+            return resultado;
+        }
+public static void IngresarLetra(char letra)
 {
-  if(letrasU.Contains(letra))
+  if(letrasIngresadas.Contains(letra))
   {
     Console.WriteLine("La letra ya fue ingresada");
     intentos++;
   }
 
-  if(palabra.Contains(letra))
+  if(palabra.Contains(letra) && !juegoFinalizado)
   {
+    letrasIngresadas.Add(letra);
     intentos++;
+
+    bool completa = true;
+                for (int i = 0; i < palabra.Length; i++)
+                {
+                    bool encontrada = false;
+                    for (int j = 0; j < letrasIngresadas.Count; j++)
+                    {
+                        if (palabra[i] == letrasIngresadas[j])
+                        {
+                            encontrada = true;
+                        }
+                    }
+
+                    if (encontrada == false)
+                    {
+                        completa = false;
+                    }
+                }
+
+                if (completa == true)
+                {
+                    juegoFinalizado = true;
+                }
+  }
+
+}
+
+public static void arriesgarPalabra(string palabraArriesgada)
+{
+  intentos++;
+
+  if (EsIgualPalabra(palabraArriesgada, palabra))
+  {
+    juegoFinalizado = true;
+    gano = true;
   }
   else
   {
-    intentos++;
-    letrasU.Add(letra);
+    juegoFinalizado = false;
+    gano = false;
   }
-
 }
 
-public static bool arriesgarPalabra(string palabraArriesgada)
+public static bool EsIgualPalabra(string arriesgo, string secreta)
 {
-  bool adivinaste = false;
-  if(palabraArriesgada == palabra)
+  bool verificar = true;
+  if (arriesgo.Length != secreta.Length)
   {
-    adivinaste = true;
+    verificar = false;
   }
-  return adivinaste;
+
+  for (int i = 0; i < arriesgo.Length; i++)
+  {
+    char letra = arriesgo[i];
+    if (letra >= 'a' && letra <= 'z' && letra != secreta[i])
+    {
+      verificar = false;
+    }
+  }
+  return verificar;
 }
+
 }
