@@ -13,10 +13,6 @@ public static void inicializarPartida()
   intentos = 0;
 
   List <char> listaLetras = new List<char>();
-  foreach(char letra in palabra)
-  {
-    listaLetras.Add('_');
-  }
 }
 
 public static void verificarIngreso(char letra)
@@ -30,7 +26,6 @@ public static void verificarIngreso(char letra)
   if(palabra.Contains(letra))
   {
     intentos++;
-    //aca cambiar de _ a la letra
   }
   else
   {

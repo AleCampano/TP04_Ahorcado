@@ -20,9 +20,43 @@ public class HomeController : Controller
     return View();
     }
 
+    public IActionResult arriesgarPalabra(bool adivinaste)
+    {
+        if (adivinaste == true)
+        {
+            return View("Ganaste");
+        }
+        else 
+        {
+            return View("Perdiste");
+        }
+
+    }
+
+    public IActionResult remplazarLetra(char l, string palabra) 
+    {
+      List <char> listaLetras = new List<char>();
+    foreach(char letra in palabra)
+  {
+    if(letra==l)
+    {
+      listaLetras.Add(l);
+    }
+    else{
+      listaLetras.Add('_');
+    }
+  }
+  ViewBag.listaLetras = listaLetras;
+  ViewBag.palabra =palabra;
+  return View ("Jugar");
+
+    }
+
+
+
     public IActionResult Jugar()
     {
         
-        return View("Jugar");
+        return View();
     } 
 }
