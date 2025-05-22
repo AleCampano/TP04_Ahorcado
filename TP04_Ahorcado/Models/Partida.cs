@@ -81,9 +81,11 @@ public static void IngresarLetra(char letra)
       }
     }
 
-    if (completa == true)
-    {
-    juegoFinalizado = true;
+      if (completa == true)
+      {
+        juegoFinalizado = true;
+        gano = true;
+    
     }
   }
 }
