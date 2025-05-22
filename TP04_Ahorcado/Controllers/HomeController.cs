@@ -16,7 +16,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
      Partida.inicializarPartida();
-    return View();
+    return View("Index");
     }
 
     public IActionResult Jugar()
@@ -53,9 +53,9 @@ public class HomeController : Controller
         }
 
     [HttpPost]
-    public IActionResult remplazarLetra(char letra, string palabra) 
-    {
-      if (letra != null && letra != "")
+        public IActionResult IngresarLetra(string letra)
+        {
+            if (letra != null && letra != "")
             {
                 char caracter = letra[0];
 
@@ -63,13 +63,12 @@ public class HomeController : Controller
                 {
                     Partida.IngresarLetra(caracter);
                 }
-  ViewBag.letras = Partida.letrasIngeresadas;
-  ViewBag.intento = Partida.intentos;
-  ViewBag.palabra = Partida.palabra;
-  return View ("Jugar");
-
-    }
-    }
+            }
+            ViewBag.palabra = Partida.ObtenerPalabra();
+            ViewBag.intento = Partida.intentos;
+            ViewBag.letras = Partida.letrasIngresadas;
+            return View("Jugar");
+        }
     public IActionResult Fin()
     {
         return View();

@@ -4,46 +4,46 @@ static public class Partida
 {
 static public string palabra{get; private set;}
  static public int intentos{get; private set;}
-static public List <char> letrasIngeresadas {get; private set;}
+static public List <char> letrasIngresadas {get; private set;}
 static public bool juegoFinalizado {get; private set;}
 static public bool gano {get; private set;}
 
 public static void inicializarPartida()
 {
-  palabra = "Murcielago";
-  letrasIngeresadas = new List<char>();
+  palabra = "murcielago";
+  letrasIngresadas = new List<char>();
   intentos = 0;
   juegoFinalizado = false;
   gano = false;
 }
 
 public static string ObtenerPalabra()
-        {
-            string resultado = "";
+{
+  string resultado = "";
 
-            for (int i = 0; i < palabra.Length; i++)
-            {
-                char letra = palabra[i];
-                bool letraEncontrada = false;
+  for (int i = 0; i < palabra.Length; i++)
+  {
+    char letra = palabra[i];
+    bool letraEncontrada = false;
 
-                for (int j = 0; j < letrasIngresadas.Count; j++)
-                {
-                    if (letrasIngresadas[j] == letra)
-                    {
-                        letraEncontrada = true;
-                    }
-                }
+    for (int j = 0; j < letrasIngresadas.Count; j++)
+    {
+      if (letrasIngresadas[j] == letra)
+      {
+        letraEncontrada = true;
+      }
+    }
 
-                if (letraEncontrada == true)
-                {
-                    resultado += letra;
-                }
-                else if(letraEncontrada == false)
-                {
-                    resultado += "_ ";
-                }
-            }
-            return resultado;
+    if (letraEncontrada == true)
+    {
+      resultado += letra;
+    }
+    else if(letraEncontrada == false)
+    {
+      resultado += "_ ";
+    }
+  }
+    return resultado;
         }
 public static void IngresarLetra(char letra)
 {
@@ -59,27 +59,26 @@ public static void IngresarLetra(char letra)
     intentos++;
 
     bool completa = true;
-                for (int i = 0; i < palabra.Length; i++)
-                {
-                    bool encontrada = false;
-                    for (int j = 0; j < letrasIngresadas.Count; j++)
-                    {
-                        if (palabra[i] == letrasIngresadas[j])
-                        {
-                            encontrada = true;
-                        }
-                    }
+    for (int i = 0; i < palabra.Length; i++)
+      {
+        bool encontrada = false;
+        for (int j = 0; j < letrasIngresadas.Count; j++)
+        {
+          if (palabra[i] == letrasIngresadas[j])
+          {
+            encontrada = true;
+          }
+        }
+        if (encontrada == false)
+        {
+          completa = false;
+        }
+      }
 
-                    if (encontrada == false)
-                    {
-                        completa = false;
-                    }
-                }
-
-                if (completa == true)
-                {
-                    juegoFinalizado = true;
-                }
+        if (completa == true)
+        {
+          juegoFinalizado = true;
+        }
   }
 
 }
