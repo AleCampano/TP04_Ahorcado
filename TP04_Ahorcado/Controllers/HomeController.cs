@@ -70,6 +70,11 @@ public class HomeController : Controller
                 ViewBag.ganoP = Partida.gano;
                 return View("Fin");
             }
+            if (Partida.juegoFinalizado)
+            {
+                ViewBag.ganoP = Partida.gano;
+                return View("Fin");
+            }
             ViewBag.palabra = Partida.ObtenerPalabra();
             ViewBag.intento = Partida.intentos;
             ViewBag.letras = Partida.letrasIngresadas;
