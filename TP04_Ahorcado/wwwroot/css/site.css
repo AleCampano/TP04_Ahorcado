@@ -1,18 +1,35 @@
 html {
   font-size: 14px;
   min-height: 100%;
-  background-color: rgb(209, 188, 161);
+  background-color: rgb(178, 199, 223);
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 25px;
   }
+}
+p{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
-  margin: 10px;
-  padding: 10px;
+  margin: 10%;
+  padding: 10%;
+}
+a{
+  text-decoration: none;
+  color: rgb(201, 103, 103);
+  font-size: 35px;
+  
+}
+h4{
+  font-size: larger;
+}
+
+form {
+ width: 50%;
+ height: 50px;
 }
 
 
@@ -21,4 +38,8 @@ footer {
   padding: 10px;
   background-color: #f8f9fa;
   border-top: 1px solid #e9ecef;
+}
+div h2{
+
+text-decoration: underline;
 }
