@@ -47,40 +47,45 @@ public static string ObtenerPalabra()
         }
 public static void IngresarLetra(char letra)
 {
-  if(letrasIngresadas.Contains(letra))
+  bool ingreso = false;
+
+  for (int i = 0; i < letrasIngresadas.Count; i++)
   {
-    Console.WriteLine("La letra ya fue ingresada");
-    intentos++;
+    if (letrasIngresadas[i] == letra)
+    {
+      ingreso = true;
+      intentos++;
+    }
   }
 
-  if(palabra.Contains(letra) && !juegoFinalizado)
+  if (!ingreso && !juegoFinalizado)
   {
     letrasIngresadas.Add(letra);
     intentos++;
 
     bool completa = true;
     for (int i = 0; i < palabra.Length; i++)
+    {
+      bool encontrada = false;
+      for (int j = 0; j < letrasIngresadas.Count; j++)
       {
-        bool encontrada = false;
-        for (int j = 0; j < letrasIngresadas.Count; j++)
+        if (palabra[i] == letrasIngresadas[j])
         {
-          if (palabra[i] == letrasIngresadas[j])
-          {
-            encontrada = true;
-          }
-        }
-        if (encontrada == false)
-        {
-          completa = false;
+          encontrada = true;
         }
       }
 
-        if (completa == true)
-        {
-          juegoFinalizado = true;
-        }
-  }
+        if (encontrada == false)
+      {
+        completa = false;
+      }
+    }
 
+    if (completa == true)
+    {
+    juegoFinalizado = true;
+    }
+  }
 }
 
 public static void arriesgarPalabra(string palabraArriesgada)

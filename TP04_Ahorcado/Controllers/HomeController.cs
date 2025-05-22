@@ -23,6 +23,7 @@ public class HomeController : Controller
         {
             if (Partida.juegoFinalizado == true)
             {
+                
                 return View("Fin");
             }
             ViewBag.palabra = Partida.ObtenerPalabra();
