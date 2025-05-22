@@ -13,6 +13,17 @@ p{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+div h6{
+  float: left;
+  text-decoration: none;
+  font-size: 25px;
+  margin: 0.5%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+div form{
+  clear: both;
+}
 body {
   margin: 10%;
   padding: 10%;
@@ -40,6 +51,5 @@ footer {
   border-top: 1px solid #e9ecef;
 }
 div h2{
-
 text-decoration: underline;
 }

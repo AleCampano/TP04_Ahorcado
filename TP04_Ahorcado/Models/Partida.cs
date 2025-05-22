@@ -43,8 +43,8 @@ public static string ObtenerPalabra()
       resultado += "_ ";
     }
   }
-    return resultado;
-        }
+  return resultado;
+}
 public static void IngresarLetra(char letra)
 {
   bool ingreso = false;
